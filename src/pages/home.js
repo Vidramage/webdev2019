@@ -7,7 +7,7 @@ export default class Home extends React.Component {
         let myVar = "holy crap";
         return (
             <div>
-                <Header title="HipsterCode"></Header>
+                <Header title={this.props.title ? this.props.title : "no title given"}></Header>
                 <Grid data={[<div><h1>holy crap html header</h1></div>, "two", "three"]} />
             </div>
         )
