@@ -1,0 +1,19 @@
+{
+  "name": "webdev2019",
+  "version": "1.0.0",
+  "description": "A hipster code replacement/tutorial for udemy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chawk/webdev2019.git"
+  },
+  "author": "Chris Hawkes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chawk/webdev2019/issues"
+  },
+  "homepage": "https://github.com/chawk/webdev2019#readme"
+}
