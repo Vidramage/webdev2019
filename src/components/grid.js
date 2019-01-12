@@ -5,9 +5,11 @@ export default class Grid extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-sm">
-                        {this.props.dynamicTitle}
-                    </div>
+                    {this.props.data.map((item, index) => {
+                        return <div className="col-sm" key={index}>
+                                    {item}
+                                </div>
+                    })}
                 </div>
             </div>
         )
