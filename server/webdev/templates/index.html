@@ -1,9 +1,10 @@
+{% load static %}
 <html>
     <head>
         <title>
             Our App
         </title>
-    <link href="style.css" rel="stylesheet"></head>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"></head>
     <body>
         <header>
             <nav>
@@ -12,6 +13,7 @@
                 <div><a href="/">Home</a></div>
             </nav>
         </header>
+        <h1>the result</h1>
         <div id="root"></div>
-    <script type="text/javascript" src="app.bundle.js"></script></body>
+    <script type="text/javascript" src="{% static 'js/app.bundle.js' %}"></script></body>
 </html>
