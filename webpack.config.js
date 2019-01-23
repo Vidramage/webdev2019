@@ -1,10 +1,10 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCss = require('optimize-css-assets-webpack-plugin');
+const express = require('express');
 
 module.exports = {
     entry: {
@@ -39,7 +39,10 @@ module.exports = {
         hot: true,
         compress: true,
         contentBase: path.join(__dirname, 'dist'),
-        open: 'Chrome'
+        open: 'Chrome',
+        before(app) {
+            app.use('/static', express.static(path.resolve(__dirname, 'dist')))
+        }
     },
     watch: true,
     devtool: 'source-map',
@@ -48,14 +51,13 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
         new MiniCssExtractPlugin({
             filename: "style.css",
             chunkFilename: "[name].css"
         }),
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './node_server/index.html'
         })
     ],
     module: {
