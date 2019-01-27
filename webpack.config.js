@@ -48,11 +48,11 @@ module.exports = {
     devtool: 'source-map',
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist/js')
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "style.css",
+            filename: "./dist/css/style.css",
             chunkFilename: "[name].css"
         }),
         new webpack.HotModuleReplacementPlugin(),
