@@ -8,7 +8,7 @@ export default class Home extends React.Component {
         return (
             <div>
                 <Header title="Michael Mahrt Portfolio"></Header>
-                <Grid dynamicTitle={"testing " + myVar} />
+                <Grid data={[<div><h1>holy crap html header</h1></div>, "two", "three"]} />
             </div>
         )
     }
