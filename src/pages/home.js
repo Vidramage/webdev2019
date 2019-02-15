@@ -1,12 +1,14 @@
 import React from 'react';
 import Header from '../components/header';
+import Grid from '../components/grid';
 
 export default class Home extends React.Component {
     render() {
+        let myVar = "holy crap";
         return (
             <div>
                 <Header title="Michael Mahrt Portfolio"></Header>
-                <img src="https://avatars1.githubusercontent.com/u/11867489?s=460&v=4" />
+                <Grid dynamicTitle={"testing " + myVar} />
             </div>
         )
     }
