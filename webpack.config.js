@@ -29,7 +29,7 @@ module.exports = {
                 }
             }),
             new OptimizeCss({
-                cssProcessorOptions: { 
+                cssProcessorOptions: {
                     discardComments: true
                 }
             })
@@ -47,12 +47,12 @@ module.exports = {
     watch: true,
     devtool: 'source-map',
     output: {
-        filename: './js/[name].bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'css/style.css',
+            filename: "style.css",
             chunkFilename: "[name].css"
         }),
         new webpack.HotModuleReplacementPlugin(),
